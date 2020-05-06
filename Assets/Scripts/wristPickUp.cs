@@ -4,6 +4,10 @@ using UnityEngine;
 
 public class wristPickUp : MonoBehaviour
 {
+
+    public Material activePickUpMaterial;
+    public Material pickUpMaterial;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -20,7 +24,10 @@ public class wristPickUp : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sphere"))
         {
-            other.gameObject.SetActive(false);
+            if (other.gameObject.GetComponent<MeshRenderer>().sharedMaterial.Equals(activePickUpMaterial))
+            {
+                other.gameObject.GetComponent<MeshRenderer>().material = pickUpMaterial;
+            }
         }
     }
 }

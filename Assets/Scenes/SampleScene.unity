@@ -233,6 +233,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4390c2269cc08a44c8e3f3478f794629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activePickUpMaterial: {fileID: 2100000, guid: 2f72f8f563851ee44aa5da0961e13695,
+    type: 2}
+  pickUpMaterial: {fileID: 2100000, guid: 09adf96d09b3ccf4b994ee5a2889b115, type: 2}
 --- !u!1 &248553158
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,6 +528,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4390c2269cc08a44c8e3f3478f794629, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  activePickUpMaterial: {fileID: 2100000, guid: 2f72f8f563851ee44aa5da0961e13695,
+    type: 2}
+  pickUpMaterial: {fileID: 2100000, guid: 09adf96d09b3ccf4b994ee5a2889b115, type: 2}
 --- !u!1001 &648803191
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1079,7 +1085,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 827f8b30291912b42b9bc1ac191a6749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeBetweenChanges: 0
+  timeBetweenChanges: 1
   pickUpsList:
   - {fileID: 1088033077}
   - {fileID: 1030217467}
@@ -1087,8 +1093,9 @@ MonoBehaviour:
   - {fileID: 477288631}
   - {fileID: 27272525}
   - {fileID: 1978072759}
-  activePickUpMaterial: {fileID: 0}
-  pickUpMaterial: {fileID: 0}
+  activePickUpMaterial: {fileID: 2100000, guid: 2f72f8f563851ee44aa5da0961e13695,
+    type: 2}
+  pickUpMaterial: {fileID: 2100000, guid: 09adf96d09b3ccf4b994ee5a2889b115, type: 2}
 --- !u!1 &1294770162
 GameObject:
   m_ObjectHideFlags: 0
