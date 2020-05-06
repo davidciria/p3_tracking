@@ -50,9 +50,9 @@ public class TrackingReceiver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        nose.transform.position = pose["nose"];
-        wristR.transform.position = pose["rightWrist"];
-        wristL.transform.position = pose["leftWrist"];
+        nose.transform.position = pose["nose"]; 
+        wristR.transform.position = pose["leftWrist"]; //Debido al efecto espejo.
+        wristL.transform.position = pose["rightWrist"]; //Debido al efecto espejo.
 
     }
 
