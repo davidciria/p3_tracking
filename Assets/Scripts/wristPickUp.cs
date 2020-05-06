@@ -7,6 +7,7 @@ public class wristPickUp : MonoBehaviour
 
     public Material activePickUpMaterial;
     public Material pickUpMaterial;
+    public GameObject pickUps;
 
     // Start is called before the first frame update
     void Start()
@@ -24,9 +25,12 @@ public class wristPickUp : MonoBehaviour
     {
         if (other.gameObject.CompareTag("Sphere"))
         {
-            if (other.gameObject.GetComponent<MeshRenderer>().sharedMaterial.Equals(activePickUpMaterial))
+            if (other.gameObject.GetComponent<PickUpScript>().isActivated)
             {
                 other.gameObject.GetComponent<MeshRenderer>().material = pickUpMaterial;
+                other.gameObject.GetComponent<PickUpScript>().isActivated = false;
+                pickUps.GetComponent<PickUpColorChange>().StopCoroutine("changeColor");
+                pickUps.GetComponent<PickUpColorChange>().StartCoroutine("changeColor");
             }
         }
     }
