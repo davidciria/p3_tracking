@@ -11,10 +11,11 @@ public class wristPickUp : MonoBehaviour
     public GameObject pickUps;
     public GameObject UI;
 
+    public AudioSource touchedSource;
+
     // Start is called before the first frame update
     void Start()
     {
-        
     }
 
     // Update is called once per frame
@@ -29,6 +30,7 @@ public class wristPickUp : MonoBehaviour
         {
             if (other.gameObject.GetComponent<PickUpScript>().isActivated)
             {
+                touchedSource.Play();
                 UI.GetComponent<UIScript>().elevateCounter();
                 other.gameObject.GetComponent<MeshRenderer>().material = pickUpMaterial;
                 other.gameObject.GetComponent<PickUpScript>().isActivated = false;
